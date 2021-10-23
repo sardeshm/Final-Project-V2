@@ -1,0 +1,28 @@
+body {
+  background-color: #f56c6c;
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+.vowel-btn {
+  border: none;
+  color: rgb(77, 11, 243);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.consonent-btn {
+  border: none;
+  color: rgb(77, 11, 243);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}

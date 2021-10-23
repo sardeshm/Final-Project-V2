@@ -1,0 +1,17 @@
+.wrapper-homepage {
+  background-image: url("./Back_img2.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  min-height: calc(100vh - 34px);
+}
+
+.footer-pin {
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
