@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
@@ -20,62 +20,69 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const CardGrid = ({ dataList }) => {
+  const [selectedData, setSelectedData] = useState({});
+
   return (
-    <Box
-      sx={{
-        p: 2,
-        bgcolor: "background.default",
-        display: "grid",
-        gridTemplateColumns: { md: "1fr 1fr" },
-        gap: 2,
-      }}
-    >
-      <Grid style={{ border: "1px solid blue" }}>
-        <Grid item xs={2}>
-          <Box
-            sx={{
-              p: 2,
-              bgcolor: "background.default",
-              display: "grid",
-              gridTemplateColumns: { md: "1fr 1fr" },
-              gap: 2,
-            }}
-          >
-            {dataList.map((data) => (
-              <Item
-                key={data._id}
-                elevation={16}
-                onClick={() => console.log("My data : ", data.MarathiName)}
+    <Grid container spacing={2}>
+      <Grid item xs={3}>
+        <Item style={{ height: "100%" }}>
+          <Grid>
+            <Grid item>
+              <Box
+                sx={{
+                  p: 2,
+                  bgcolor: "background.default",
+                  display: "grid",
+                  gridTemplateColumns: { md: "1fr 1fr" },
+                  gap: 2,
+                }}
               >
-                {data.Marathi}
-              </Item>
-            ))}
-          </Box>
-        </Grid>
+                {dataList.map((data) => (
+                  <Item
+                    className="mousePointer"
+                    key={data._id}
+                    elevation={16}
+                    onClick={() => setSelectedData(data)}
+                  >
+                    {data.Marathi}
+                  </Item>
+                ))}
+              </Box>
+            </Grid>
+          </Grid>
+        </Item>
       </Grid>
-      <div>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardMedia
-            component="img"
-            height="140"
-            image={data.Image}
-            alt="green iguana"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Vowls/Conso
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {data.MarathiName}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {data.EnglishName}
-              {data.GermanName}
-            </Typography>
-          </CardContent>
-        </Card>
-      </div>
-    </Box>
+      <Grid item xs={9}>
+        <Item style={{ height: "100%" }}>
+          <div>
+            <img
+              style={{ position: "relative" }}
+              src={selectedData.Image}
+              width="400"
+              height="400"
+              alt=""
+            />
+            <div>
+              <Typography gutterBottom variant="h5" component="div">
+                Vowls/Conso
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {selectedData.Marathi}
+                {selectedData.MarathiName}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {selectedData.English}
+                {selectedData.EnglishName}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {selectedData.German}
+                {selectedData.GermanName}
+              </Typography>
+            </div>
+          </div>
+        </Item>
+      </Grid>
+    </Grid>
   );
 };
 
