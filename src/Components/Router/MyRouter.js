@@ -10,8 +10,9 @@ const MyRouter = () => {
     <div>
       <Router>
         <Switch>
-          <Route exact path="/" component={HomePage} test="test"></Route>
-          <Route path="/alphabets/:category?" component={AlphabetPage}></Route>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/alphabets/vowels" component={HomePage}></Route>
+          <Route path="/alphabets" component={AlphabetPage}></Route>
           <Route path="/numbers" component={NumberPage}></Route>
           <Route path="/words" component={WordsPage}></Route>
         </Switch>

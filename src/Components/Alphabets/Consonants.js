@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import CardGrid from "../common/CardGrid";
 
 const Consonants = () => {
   const [consonants, setConsonants] = useState([]);
@@ -18,19 +19,7 @@ const Consonants = () => {
     });
   };
 
-  return (
-    <div>
-      <div className="heading">Alphabets</div>
-
-      <div className="marathialphabet">{consonants.MarathiAlphabet}</div>
-      <div className="englishalphabet">{consonants.EnglishAlphabet}</div>
-      <div className="germanalphabet">{consonants.GermanAlphabet}</div>
-      <img src={consonants.Image} alt="" />
-      <div className="marathiname">{consonants.Marathiname}</div>
-      <div className="englishname">{consonants.Englishname} </div>
-      <div className="germanname">{consonants.Germanname}</div>
-    </div>
-  );
+  return <CardGrid dataList={consonants} />;
 };
 
 export default Consonants;
