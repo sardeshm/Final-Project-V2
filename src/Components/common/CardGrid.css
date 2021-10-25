@@ -1,3 +1,11 @@
 .mousePointer {
   cursor: pointer;
+  background-color: tomato;
+  font-size: 30px;
+  color: yellowgreen;
+  font-weight: 700;
+}
+.card {
+  background-color: turquoise;
+  font-size: 30px;
 }

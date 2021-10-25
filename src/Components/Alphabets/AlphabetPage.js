@@ -1,12 +1,23 @@
 import React, { useState } from "react";
+
 import Vowels from "./Vowels";
 import Consonants from "./Consonants";
 import "./AlphabetPage.css";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import vowelbackground from "./vowelbackground.jpeg";
 
 const AlphabetPage = () => {
   const [isVowelsComponent, setVowelsComponent] = useState(true);
+
+  // const useStyles = makeStyles({
+  //   buttonStep: {
+  //     width: "150px",
+  //     height: "150px",
+  //     backgroundImage: "./vowelbackground.jpeg",
+  //   },
+  // });
+  // const classes = useStyles();
 
   return (
     <div>
@@ -15,13 +26,10 @@ const AlphabetPage = () => {
           variant="contained"
           aria-label="outlined primary button group"
         >
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            onClick={() => setVowelsComponent(true)}
-          >
+          <Button onClick={() => setVowelsComponent(true)}>
+            {" "}
             Vowels
+            <img src={vowelbackground} alt="bkg" className="bkg-btn" />
           </Button>
 
           <Button

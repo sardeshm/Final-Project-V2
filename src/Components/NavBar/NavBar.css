@@ -1,20 +1,22 @@
-.NavBar {
+.appbar {
+  background-color: turquoise;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
+  align-items: left;
+  min-height: 15vh;
 }
 
-img {
+.logo {
   width: 200px;
   height: 200px;
-  position: fixed;
+  position: static;
+  justify-content: flex-end;
   left: 10px;
   top: 10px;
   box-shadow: brown;
   border-radius: 35px;
 }
-.nav-links {
+/* .nav-links {
   width: 50%;
   display: flex;
   justify-content: space-around;
@@ -23,4 +25,23 @@ img {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   list-style: none;
+} */
+.toolbar {
+  background-color: skyblue;
+  align-items: flex-start;
+  justify-content: end;
+}
+.home-btn {
+  color: tomato;
+  size: 40px;
+}
+
+.img-home {
+  width: 100px;
+  height: 100px;
+  justify-content: flex-end;
+  left: 10px;
+  top: 10px;
+  box-shadow: brown;
+  border-radius: 35px;
 }

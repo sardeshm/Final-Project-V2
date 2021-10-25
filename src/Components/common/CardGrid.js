@@ -31,7 +31,7 @@ const CardGrid = ({ dataList }) => {
               <Box
                 sx={{
                   p: 2,
-                  bgcolor: "background.default",
+                  bgcolor: "yellow",
                   display: "grid",
                   gridTemplateColumns: { md: "1fr 1fr" },
                   gap: 2,
@@ -53,7 +53,7 @@ const CardGrid = ({ dataList }) => {
         </Item>
       </Grid>
       <Grid item xs={9}>
-        <Item style={{ height: "100%" }}>
+        <Item style={{ height: "100%" }} className="card">
           <div>
             <img
               style={{ position: "relative" }}
@@ -63,18 +63,21 @@ const CardGrid = ({ dataList }) => {
               alt=""
             />
             <div>
-              <Typography gutterBottom variant="h5" component="div">
-                Vowls/Conso
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+              ></Typography>
+              <Typography variant="h6" color="text.secondary">
                 {selectedData.Marathi}
+
                 {selectedData.MarathiName}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="h6" color="text.secondary">
                 {selectedData.English}
                 {selectedData.EnglishName}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="h6" color="text.secondary">
                 {selectedData.German}
                 {selectedData.GermanName}
               </Typography>
