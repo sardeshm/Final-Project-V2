@@ -9,6 +9,12 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 const WordsPage = () => {
   const [isComponent, setComponent] = useState();
 
+  function handleOnClick(event) {
+    window.scrollTo(0, 0);
+    setComponent(event.target.id);
+    return;
+  }
+
   return (
     <div>
       <div>
@@ -20,7 +26,8 @@ const WordsPage = () => {
             variant="contained"
             color="primary"
             size="large"
-            onClick={() => setComponent()}
+            onClick={handleOnClick}
+            id="Vegetables"
           >
             Vegetables
           </Button>
@@ -29,7 +36,8 @@ const WordsPage = () => {
             variant="contained"
             color="primary"
             size="large"
-            onClick={() => setComponent()}
+            onClick={handleOnClick}
+            id="Fruits"
           >
             Fruits
           </Button>
@@ -37,7 +45,8 @@ const WordsPage = () => {
             variant="contained"
             color="primary"
             size="large"
-            onClick={() => setComponent()}
+            onClick={handleOnClick}
+            id="Animals"
           >
             Animals
           </Button>
@@ -45,24 +54,19 @@ const WordsPage = () => {
             variant="contained"
             color="primary"
             size="large"
-            onClick={() => setComponent()}
+            onClick={handleOnClick}
+            id="Colors"
           >
             Colors
           </Button>
         </ButtonGroup>
       </div>
 
-      {isComponent === Vegetables ? (
-        <Vegetables />
-      ) : isComponent === Fruits ? (
-        <Fruits />
-      ) : isComponent === Animals ? (
-        <Animals />
-      ) : isComponent === Colors ? (
-        <Colors />
-      ) : (
-        <h1>More Words</h1>
-      )}
+      {isComponent === "Vegetables" && <Vegetables />}
+      {isComponent === "Fruits" && <Fruits />}
+      {isComponent === "Animals" && <Animals />}
+      {isComponent === "Colors" && <Colors />}
+      {!isComponent && <h1>More Words</h1>}
     </div>
   );
 };

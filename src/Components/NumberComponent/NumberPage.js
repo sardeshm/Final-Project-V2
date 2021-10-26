@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Number from "./Number";
 
 const NumberPage = () => {
   const [numbers, setNumbers] = useState([]);
@@ -19,16 +20,20 @@ const NumberPage = () => {
 
   return (
     <div>
-      {/* <div className="heading">Number</div>
-
-      <div className="marathinumber">{number.Marathinumber}</div>
-      <div className="englishnumber">{number.EnglishNumber}</div>
-      <div className="germannumber">{number.GermanNumber}</div>
-      {/* <img src={consonants.Image} alt="" /> */}
-      {/* <div className="marathiname">{number.Marathiname}</div>
-      <div className="englishname">{number.Englishname} </div>
-      <div className="germanname">{number.Germanname}</div> */}{" "}
-      */}
+      {numbers.map((number) => {
+        return (
+          <div>
+            <Number
+              MarathiNumber={number.MarathiNumber}
+              EnglishNumber={number.EnglishNumber}
+              GermanNumber={number.GermanNumber}
+              MarathiPronunciation={number.MarathiPronunciation}
+              EnglishPronunciation={number.EnglishPronunciation}
+              GermanPronunciation={number.GermanPronunciation}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };

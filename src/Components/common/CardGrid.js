@@ -4,11 +4,11 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import "./CardGrid.css";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
+//import Card from "@mui/material/Card";
+//import CardActions from "@mui/material/CardActions";
+//import CardContent from "@mui/material/CardContent";
+//import CardMedia from "@mui/material/CardMedia";
+//import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -27,7 +27,7 @@ const CardGrid = ({ dataList }) => {
       <Grid item xs={3}>
         <Item style={{ height: "100%" }}>
           <Grid>
-            <Grid item>
+            <Grid>
               <Box
                 sx={{
                   p: 2,

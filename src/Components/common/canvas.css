@@ -1,0 +1,27 @@
+.container {
+  background-color: rgb(245, 245, 153);
+}
+
+.canvas {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+}
+
+.para {
+  margin: 2rem auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  color: rgb(247, 106, 6);
+  font-weight: 600;
+  font-style: italic;
+}
+h1 {
+  color: darkgreen;
+  box-sizing: border-box;
+  box-shadow: darkmagenta;
+}

@@ -4,6 +4,7 @@ import HomePage from "../HomeComponent/HomePage";
 import AlphabetPage from "../Alphabets/AlphabetPage";
 import NumberPage from "../NumberComponent/NumberPage";
 import WordsPage from "../WordComponent/WordsPage";
+import Canvas from "../common/Canvas";
 
 const MyRouter = () => {
   return (
@@ -15,6 +16,7 @@ const MyRouter = () => {
           <Route path="/alphabets" component={AlphabetPage}></Route>
           <Route path="/numbers" component={NumberPage}></Route>
           <Route path="/words" component={WordsPage}></Route>
+          <Route path="/canvas" component={Canvas}></Route>
         </Switch>
       </Router>
     </div>
