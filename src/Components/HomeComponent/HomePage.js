@@ -5,6 +5,9 @@ import NavBar from "../NavBar/NavBar";
 import "./Homepage.css";
 import Canvas from "../common/Canvas";
 import Sketch from "/Users/imac/Documents/Sarika/Final project_2/learning-mothertounge/src/Components/common/sketch.jpeg";
+//import PracticeData from "../common/PracticeData";
+// import SearchBar from "./SearchBar";
+import PdfUpload from "../common/PdfUpload";
 
 const HomePage = () => {
   let history = useHistory();

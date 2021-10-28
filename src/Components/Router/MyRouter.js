@@ -4,6 +4,7 @@ import HomePage from "../HomeComponent/HomePage";
 import AlphabetPage from "../Alphabets/AlphabetPage";
 import NumberPage from "../NumberComponent/NumberPage";
 import WordsPage from "../WordComponent/WordsPage";
+
 import Canvas from "../common/Canvas";
 
 const MyRouter = () => {
