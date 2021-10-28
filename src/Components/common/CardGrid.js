@@ -10,6 +10,7 @@ import "./CardGrid.css";
 //import CardMedia from "@mui/material/CardMedia";
 //import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import "./CardGrid.css";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -17,24 +18,25 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
   height: 60,
   lineHeight: "60px",
+  backgroundColor: "orange",
 }));
 
 const CardGrid = ({ dataList }) => {
   const [selectedData, setSelectedData] = useState({});
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={4}>
       <Grid item xs={3}>
         <Item style={{ height: "100%" }}>
           <Grid>
             <Grid>
               <Box
                 sx={{
-                  p: 2,
+                  p: 4,
                   bgcolor: "yellow",
                   display: "grid",
                   gridTemplateColumns: { md: "1fr 1fr" },
-                  gap: 2,
+                  gap: 4,
                 }}
               >
                 {dataList.map((data) => (
@@ -42,6 +44,7 @@ const CardGrid = ({ dataList }) => {
                     className="mousePointer"
                     key={data._id}
                     elevation={16}
+                    color="black"
                     onClick={() => setSelectedData(data)}
                   >
                     {data.Marathi}
@@ -56,7 +59,7 @@ const CardGrid = ({ dataList }) => {
         <Item style={{ height: "100%" }} className="card">
           <div>
             <img
-              style={{ position: "relative" }}
+              style={{ position: "relative", padding: 50 }}
               src={selectedData.Image}
               width="400"
               height="400"
@@ -65,9 +68,10 @@ const CardGrid = ({ dataList }) => {
             <div>
               <Typography
                 gutterBottom
-                variant="h5"
+                variant="h4"
                 component="div"
               ></Typography>
+
               <Typography variant="h6" color="text.secondary">
                 {selectedData.Marathi}
 

@@ -6,6 +6,8 @@ import NumberPage from "../NumberComponent/NumberPage";
 import WordsPage from "../WordComponent/WordsPage";
 
 import Canvas from "../common/Canvas";
+import Contact from "../Footer/Contact";
+import AboutUs from "../Footer/AboutUs";
 
 const MyRouter = () => {
   return (
@@ -18,6 +20,8 @@ const MyRouter = () => {
           <Route path="/numbers" component={NumberPage}></Route>
           <Route path="/words" component={WordsPage}></Route>
           <Route path="/canvas" component={Canvas}></Route>
+          <Route path="/contact" component={Contact}></Route>
+          <Route path="/aboutus" component={AboutUs}></Route>
         </Switch>
       </Router>
     </div>

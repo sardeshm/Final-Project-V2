@@ -66,7 +66,12 @@ const WordsPage = () => {
       {isComponent === "Fruits" && <Fruits />}
       {isComponent === "Animals" && <Animals />}
       {isComponent === "Colors" && <Colors />}
-      {!isComponent && <h1>More Words</h1>}
+      {!isComponent && (
+        <h1>
+          More Words सुंदर सुंदर शब्दांचे सुंदर सुंदर घर त्यांतून काही हळवे हळवे
+          राहत होते स्वर
+        </h1>
+      )}
     </div>
   );
 };

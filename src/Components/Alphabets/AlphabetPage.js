@@ -1,38 +1,48 @@
 import React, { useState } from "react";
+import Stack from "@mui/material/Stack";
 
 import Vowels from "./Vowels";
 import Consonants from "./Consonants";
 import "./AlphabetPage.css";
 import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
+//import ButtonGroup from "@mui/material/ButtonGroup";
 import vowelbackground from "./vowelbackground.jpeg";
+//import { makeStyles } from "@mui/material";
 
 const AlphabetPage = () => {
   const [isVowelsComponent, setVowelsComponent] = useState(true);
 
   // const useStyles = makeStyles({
-  //   buttonStep: {
+  //   root: {
   //     width: "150px",
   //     height: "150px",
   //     backgroundImage: "./vowelbackground.jpeg",
   //   },
   // });
-  // const classes = useStyles();
+
+  // const ButtonStyled = () => {
+  //   const classes = useStyles();
+
+  //   return <Button className={classes.root}></Button>;
+  // };
 
   return (
     <div>
       <div>
-        <ButtonGroup
-          variant="contained"
-          aria-label="outlined primary button group"
-        >
-          <Button onClick={() => setVowelsComponent(true)}>
+        <Stack direction="row" spacing={7}>
+          <Button
+            className="vowel-btn"
+            variant="contained"
+            color="primary"
+            size="large"
+            onClick={() => setVowelsComponent(true)}
+          >
             {" "}
             Vowels
-            <img src={vowelbackground} alt="bkg" className="bkg-btn" />
           </Button>
 
           <Button
+            className="consonent-btn"
             variant="contained"
             color="primary"
             size="large"
@@ -40,9 +50,9 @@ const AlphabetPage = () => {
           >
             Consonents
           </Button>
-        </ButtonGroup>
+        </Stack>
       </div>
-
+      <div className="click-btn">Click The Buttons and Choose the Alphabet</div>
       {isVowelsComponent ? <Vowels /> : <Consonants />}
     </div>
   );

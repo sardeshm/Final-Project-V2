@@ -1,20 +1,22 @@
-// import React, { useState } from "react";
-// import SearchIcon from "@mui/icons-material/Search";
+import React from "react";
+import SearchIcon from "@mui/icons-material/Search";
+import InputAdornment from "@mui/material/InputAdornment";
 
-// const SearchBar = () => {
-//   const [search, setSearch] = useState("");
+const SearchBar = ({ onChange }) => {
+  return (
+    <div>
+      <div className="searchInput">
+        <input
+          type="text"
+          placeholder="Search here"
+          onChange={(e) => onChange(e.target.value)}
+        />
 
-//   const handleFilter = (event) => {
-//     const searchWord = event.target.value;
-//   };
-//   return (
-//     <div>
-//       <div className="searchInput">
-//         <input type="text" placeholder="Search here" onChange={handleFilter} />
-//       </div>
-//       <div className="searchIcon"></div>
-//     </div>
-//   );
-// };
+        <SearchIcon />
+        <InputAdornment />
+      </div>
+    </div>
+  );
+};
 
-// export default SearchBar;
+export default SearchBar;

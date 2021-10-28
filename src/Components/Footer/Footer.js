@@ -1,29 +1,58 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import Box from "@mui/material/Box";
+//import { Container } from "@mui/material";
+//import { Grid } from "@mui/material";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ContactsIcon from "@mui/icons-material/Contacts";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import "./footer.css";
+import { Button } from "@mui/material";
 
 const Footer = () => {
   const [value, setValue] = React.useState(0);
 
+  let history = useHistory();
+  const redirect = (path) => {
+    history.push(path);
+  };
   return (
-    <Box sx={{ width: 500 }}>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
-        <BottomNavigationAction label="Contact me" icon={<MailOutlineIcon />} />
-      </BottomNavigation>
-    </Box>
+    <div className="footer">
+      <Box sx={{ width: 500, backgroundColor: "lawngreen" }}>
+        <BottomNavigation
+          showLabels
+          value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+        >
+          <div>
+            <Button color="inherit" onClick={() => redirect("../AboutUs")}>
+              <BottomNavigationAction
+                label="AboutUs"
+                icon={<PermIdentityIcon />}
+              />
+            </Button>
+            <Button color="inherit" onClick={() => redirect("../Contact")}>
+              <BottomNavigationAction
+                label="MessageUs"
+                icon={<ContactsIcon />}
+              />
+            </Button>
+          </div>
+          <div className="social-icon">
+            <BottomNavigationAction label="Insta" icon={<InstagramIcon />} />
+            <BottomNavigationAction label="Insta" icon={<TwitterIcon />} />
+
+            <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />
+          </div>
+        </BottomNavigation>
+      </Box>
+    </div>
   );
 };
 
