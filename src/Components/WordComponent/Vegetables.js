@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import CardGrid from "../common/CardGrid";
+//import CardGrid from "../common/CardGrid";
+import CardGridWords from "../common/CardGridWords";
 
 const Vegetables = () => {
   const [vegetables, setVegetables] = useState([]);
@@ -18,7 +19,7 @@ const Vegetables = () => {
     });
   };
 
-  return <CardGrid dataList={vegetables} />;
+  return <CardGridWords dataList={vegetables} />;
 };
 
 export default Vegetables;

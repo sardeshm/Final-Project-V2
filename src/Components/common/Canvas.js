@@ -4,6 +4,9 @@ import PdfUpload from "./PdfUpload";
 import CanvasDraw from "react-canvas-draw";
 import "./canvas.css";
 import { useIsMobileOrTablet } from "./isMobileOrTablet";
+//import AlphabetDraw from "./AlphabetDraw";
+import Drawing from "./Drawing";
+//import AlphabetDraw from "./AlphabetDraw";
 
 const Canvas = () => {
   const isMobOrTab = useIsMobileOrTablet();
@@ -51,9 +54,7 @@ const Canvas = () => {
       <Button size="large" onClick={undo}>
         Undo
       </Button>
-      <div>
-        <PdfUpload />
-      </div>
+      <Drawing />
     </div>
   );
 };

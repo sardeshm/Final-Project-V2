@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
-import "./CardGrid.css";
+
 //import Card from "@mui/material/Card";
 //import CardActions from "@mui/material/CardActions";
 //import CardContent from "@mui/material/CardContent";
@@ -11,7 +11,6 @@ import "./CardGrid.css";
 //import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "./CardGrid.css";
-import Canvas from "./Canvas";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -22,7 +21,7 @@ const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "orange",
 }));
 
-const CardGrid = ({ dataList }) => {
+const CardGridWords = ({ dataList }) => {
   const [selectedData, setSelectedData] = useState({});
 
   return (
@@ -48,7 +47,7 @@ const CardGrid = ({ dataList }) => {
                     color="black"
                     onClick={() => setSelectedData(data)}
                   >
-                    {data.Marathi}
+                    {data.MarathiName}
                   </Item>
                 ))}
               </Box>
@@ -93,4 +92,4 @@ const CardGrid = ({ dataList }) => {
   );
 };
 
-export default CardGrid;
+export default CardGridWords;

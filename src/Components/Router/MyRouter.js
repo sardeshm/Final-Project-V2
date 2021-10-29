@@ -8,6 +8,8 @@ import WordsPage from "../WordComponent/WordsPage";
 import Canvas from "../common/Canvas";
 import Contact from "../Footer/Contact";
 import AboutUs from "../Footer/AboutUs";
+import Drawing from "../common/Drawing";
+import AlphabetDraw from "../common/AlphabetDraw";
 
 const MyRouter = () => {
   return (
