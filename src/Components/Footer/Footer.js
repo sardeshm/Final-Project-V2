@@ -22,7 +22,7 @@ const Footer = () => {
   };
   return (
     <div className="footer">
-      <Box sx={{ width: 500, backgroundColor: "lawngreen" }}>
+      <Box sx={{ width: 900, backgroundColor: "lawngreen" }}>
         <BottomNavigation
           showLabels
           value={value}
@@ -31,7 +31,7 @@ const Footer = () => {
           }}
         >
           <div>
-            <Button color="inherit" onClick={() => redirect("../AboutUs")}>
+            <Button color="secondary" onClick={() => redirect("../AboutUs")}>
               <BottomNavigationAction
                 label="AboutUs"
                 icon={<PermIdentityIcon />}
@@ -45,7 +45,10 @@ const Footer = () => {
             </Button>
           </div>
           <div className="social-icon">
-            <BottomNavigationAction label="Insta" icon={<InstagramIcon />} />
+            <BottomNavigationAction
+              label="Insta"
+              icon={<InstagramIcon color="black" />}
+            />
             <BottomNavigationAction label="Insta" icon={<TwitterIcon />} />
 
             <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />

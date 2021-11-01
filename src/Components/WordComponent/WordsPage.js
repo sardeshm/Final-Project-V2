@@ -18,48 +18,43 @@ const WordsPage = () => {
   return (
     <div>
       <div>
-        <ButtonGroup
+        <Button
           variant="contained"
-          aria-label="outlined primary button group"
+          color="primary"
+          size="large"
+          onClick={handleOnClick}
+          id="Vegetables"
         >
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            onClick={handleOnClick}
-            id="Vegetables"
-          >
-            Vegetables
-          </Button>
+          Vegetables
+        </Button>
 
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            onClick={handleOnClick}
-            id="Fruits"
-          >
-            Fruits
-          </Button>
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            onClick={handleOnClick}
-            id="Animals"
-          >
-            Animals
-          </Button>
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            onClick={handleOnClick}
-            id="Colors"
-          >
-            Colors
-          </Button>
-        </ButtonGroup>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          onClick={handleOnClick}
+          id="Fruits"
+        >
+          Fruits
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          onClick={handleOnClick}
+          id="Animals"
+        >
+          Animals
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          onClick={handleOnClick}
+          id="Colors"
+        >
+          Colors
+        </Button>
       </div>
 
       {isComponent === "Vegetables" && <Vegetables />}

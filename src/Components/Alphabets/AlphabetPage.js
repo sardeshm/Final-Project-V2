@@ -8,10 +8,12 @@ import Button from "@mui/material/Button";
 //import ButtonGroup from "@mui/material/ButtonGroup";
 import vowelbackground from "./vowelbackground.jpeg";
 //import { makeStyles } from "@mui/material";
+import { useLocation } from "react-router-dom";
 
 const AlphabetPage = () => {
   const [isVowelsComponent, setVowelsComponent] = useState(true);
-
+  const location = useLocation();
+  const param = location.state.params;
   // const useStyles = makeStyles({
   //   root: {
   //     width: "150px",
@@ -52,8 +54,12 @@ const AlphabetPage = () => {
           </Button>
         </Stack>
       </div>
-      <div className="click-btn">Click The Buttons and Choose the Alphabet</div>
-      {isVowelsComponent ? <Vowels /> : <Consonants />}
+
+      {isVowelsComponent ? (
+        <Vowels type={param} />
+      ) : (
+        <Consonants type={param} />
+      )}
     </div>
   );
 };

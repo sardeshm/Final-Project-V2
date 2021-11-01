@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
-import "./CardGrid.css";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import CanvasDraw from "react-canvas-draw";
 //import Card from "@mui/material/Card";
 //import CardActions from "@mui/material/CardActions";
 //import CardContent from "@mui/material/CardContent";
 //import CardMedia from "@mui/material/CardMedia";
-//import Button from "@mui/material/Button";
+import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "./CardGrid.css";
-import Canvas from "./Canvas";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -22,9 +22,19 @@ const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "orange",
 }));
 
-const CardGrid = ({ dataList }) => {
+const CardGrid = ({ dataList, type }) => {
   const [selectedData, setSelectedData] = useState({});
-
+  const canvas = useRef(null);
+  const handleClick = () => {
+    const data = canvas.current.getSaveData();
+    const clear = canvas;
+  };
+  const clear = () => {
+    canvas.current.clear();
+  };
+  const undo = () => {
+    canvas.current.undo();
+  };
   return (
     <Grid container spacing={4}>
       <Grid item xs={3}>
@@ -58,14 +68,27 @@ const CardGrid = ({ dataList }) => {
       </Grid>
       <Grid item xs={9}>
         <Item style={{ height: "100%" }} className="card">
+          <div className="title">
+            {" "}
+            <ArrowBackIcon />
+            Click The Button From the side
+          </div>
           <div>
-            <img
-              style={{ position: "relative", padding: 50 }}
-              src={selectedData.Image}
-              width="400"
-              height="400"
-              alt=""
-            />
+            {type === "alphabet" ? (
+              <img
+                style={{ position: "relative", padding: 50 }}
+                src={selectedData.Image}
+                width="400"
+                height="400"
+                alt=""
+              />
+            ) : (
+              <img
+                style={{ position: "relative", padding: 50 }}
+                src={"/ImagesForPractice/" + selectedData.canvasImage}
+              />
+            )}
+
             <div>
               <Typography
                 gutterBottom
@@ -86,6 +109,25 @@ const CardGrid = ({ dataList }) => {
                 German : {selectedData.GermanName}
               </Typography>
             </div>
+          </div>
+          <div>
+            <CanvasDraw
+              brushRadius={1}
+              brushColor="red"
+              hideGrid={true}
+              style={{
+                boxShadow:
+                  "0 13px 27px -5px rgba(50, 50, 93, 0.25),    0 8px 16px -8px rgba(0, 0, 0, 0.3)",
+              }}
+              ref={canvas}
+            />
+            <Button onClick={handleClick}>Save Drawing</Button>
+            <Button size="large" onClick={clear}>
+              Clear the canvas
+            </Button>
+            <Button size="large" onClick={undo}>
+              Undo
+            </Button>
           </div>
         </Item>
       </Grid>

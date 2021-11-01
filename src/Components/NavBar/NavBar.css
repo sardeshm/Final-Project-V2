@@ -25,22 +25,23 @@
   size: 40px;
 }
 
-.img-home {
-  width: 100px;
-  height: 100px;
+.flexContainer {
   display: flex;
-  align-items: flex-end;
-  left: 10px;
-  top: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.img-home {
+  width: 150px;
+  height: 150px;
 }
 
 .p1,
 .p2,
 .p3,
 .p4 {
-  padding-left: 5px;
   font-size: 20px;
   font-weight: bolder;
-  display: flex;
-  align-items: flex-end;
 }

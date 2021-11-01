@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
-
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 //import Card from "@mui/material/Card";
 //import CardActions from "@mui/material/CardActions";
 //import CardContent from "@mui/material/CardContent";
@@ -21,7 +21,7 @@ const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "orange",
 }));
 
-const CardGridWords = ({ dataList }) => {
+const CardGrid = ({ dataList }) => {
   const [selectedData, setSelectedData] = useState({});
 
   return (
@@ -57,6 +57,11 @@ const CardGridWords = ({ dataList }) => {
       </Grid>
       <Grid item xs={9}>
         <Item style={{ height: "100%" }} className="card">
+          <div className="title">
+            {" "}
+            <ArrowBackIcon />
+            Click The Button From the side
+          </div>
           <div>
             <img
               style={{ position: "relative", padding: 50 }}
@@ -71,19 +76,6 @@ const CardGridWords = ({ dataList }) => {
                 variant="h4"
                 component="div"
               ></Typography>
-
-              <Typography variant="h6" color="text.secondary">
-                {/* {selectedData.Marathi} */}
-                Marathi : {selectedData.MarathiName}
-              </Typography>
-              <Typography variant="h6" color="text.secondary">
-                {/* {selectedData.English} */}
-                English : {selectedData.EnglishName}
-              </Typography>
-              <Typography variant="h6" color="text.secondary">
-                {/* {selectedData.German} */}
-                German : {selectedData.GermanName}
-              </Typography>
             </div>
           </div>
         </Item>
@@ -92,4 +84,4 @@ const CardGridWords = ({ dataList }) => {
   );
 };
 
-export default CardGridWords;
+export default CardGrid;

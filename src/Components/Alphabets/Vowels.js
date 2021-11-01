@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Vowels.css";
 import CardGrid from "../common/CardGrid";
 
-const Vowels = () => {
+const Vowels = ({ type }) => {
   const [vowels, setVowels] = useState([]);
 
   const AlphabetVowelsEndpoint = "http://localhost:3001/alphabets/vowels";
@@ -19,7 +19,7 @@ const Vowels = () => {
     });
   };
 
-  return <CardGrid dataList={vowels} />;
+  return <CardGrid type={type} dataList={vowels} />;
 };
 
 export default Vowels;
