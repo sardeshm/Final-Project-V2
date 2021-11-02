@@ -1,25 +1,3 @@
-.appbar {
-  display: flex;
-  justify-content: space-around;
-
-  min-height: 15vh;
-}
-
-/* .nav-links {
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 30px;
-  font-family: "Poppins", sans-serif;
-  text-decoration: none;
-  list-style: none;
-} */
-.toolbar {
-  background-color: skyblue;
-  align-items: flex-end;
-  justify-content: end;
-}
 .home-btn {
   color: tomato;
   size: 40px;

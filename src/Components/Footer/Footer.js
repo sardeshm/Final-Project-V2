@@ -22,7 +22,7 @@ const Footer = () => {
   };
   return (
     <div className="footer">
-      <Box sx={{ width: 900, backgroundColor: "lawngreen" }}>
+      <Box sx={{ width: 900 }}>
         <BottomNavigation
           showLabels
           value={value}
@@ -30,29 +30,15 @@ const Footer = () => {
             setValue(newValue);
           }}
         >
-          <div>
-            <Button color="secondary" onClick={() => redirect("../AboutUs")}>
-              <BottomNavigationAction
-                label="AboutUs"
-                icon={<PermIdentityIcon />}
-              />
-            </Button>
-            <Button color="inherit" onClick={() => redirect("../Contact")}>
-              <BottomNavigationAction
-                label="MessageUs"
-                icon={<ContactsIcon />}
-              />
-            </Button>
+          <div onClick={() => redirect("../AboutUs")}>
+            <BottomNavigationAction icon={<PermIdentityIcon />} />
           </div>
-          <div className="social-icon">
-            <BottomNavigationAction
-              label="Insta"
-              icon={<InstagramIcon color="black" />}
-            />
-            <BottomNavigationAction label="Insta" icon={<TwitterIcon />} />
-
-            <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />
-          </div>
+          <Button color="inherit" onClick={() => redirect("../Contact")}>
+            <BottomNavigationAction icon={<ContactsIcon />} />
+          </Button>
+          <BottomNavigationAction icon={<InstagramIcon />} />
+          <BottomNavigationAction icon={<TwitterIcon />} />
+          <BottomNavigationAction icon={<FacebookIcon />} />
         </BottomNavigation>
       </Box>
     </div>

@@ -1,13 +1,18 @@
-.social-icon {
+/* .social-icon {
   justify-content: right;
   background-color: lawngreen;
   color: mediumorchid;
-}
+} */
 .footer {
+}
+.MuiBottomNavigation-root {
   position: fixed;
-  left: 5px;
-  bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  bottom: 1px;
   height: 30px;
-  width: 20%;
+  width: 100%;
+}
+.MuiBox-root {
   background-color: lightgreen;
 }

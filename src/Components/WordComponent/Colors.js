@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import CardGrid from "../common/CardGrid";
+import CardGridWords from "../common/CardGridWords";
 
 const Colors = () => {
   const [colors, setColors] = useState([]);
@@ -18,7 +18,7 @@ const Colors = () => {
     });
   };
 
-  return <CardGrid dataList={colors} />;
+  return <CardGridWords dataList={colors} />;
 };
 
 export default Colors;

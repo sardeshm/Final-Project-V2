@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Number from "./Number";
-
+import NumberCard from "./NumberCard";
+import Grid from "@mui/material/Grid";
+import { Container } from "@mui/material";
+import "./numbercard.css";
 const NumberPage = () => {
   const [numbers, setNumbers] = useState([]);
 
@@ -19,22 +21,16 @@ const NumberPage = () => {
   };
 
   return (
-    <div>
-      {numbers.map((number) => {
-        return (
-          <div>
-            <Number
-              MarathiNumber={number.MarathiNumber}
-              EnglishNumber={number.EnglishNumber}
-              GermanNumber={number.GermanNumber}
-              MarathiPronunciation={number.MarathiPronunciation}
-              EnglishPronunciation={number.EnglishPronunciation}
-              GermanPronunciation={number.GermanPronunciation}
-            />
-          </div>
-        );
-      })}
-    </div>
+    <Container>
+      <h1 className="number-heading">Learning Numbers अंकांची ओळख</h1>
+      <Grid container>
+        {numbers.map((number) => (
+          <Grid item key={number.id} xs={12} md={6} lg={4}>
+            <NumberCard number={number} />
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   );
 };
 

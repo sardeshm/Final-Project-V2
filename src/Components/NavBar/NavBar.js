@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles";
 import abc from "./abc.jpeg";
 import number from "./number.jpeg";
 import words from "./words_1.jpeg";
-// import Sketch from "@/images/common/sketch.jpeg";
+
 import "./NavBar.css";
 
 import Box from "@mui/material/Box";
@@ -25,7 +25,6 @@ const NavBar = () => {
     height: 220,
     lineHeight: "60px",
     borderRadius: 10,
-    backgroundColor: "white",
   }));
 
   return (

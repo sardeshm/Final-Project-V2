@@ -6,12 +6,30 @@
   font-weight: 700;
   font-size: 20px;
 }
-.card {
-  background-color: turquoise;
-  font-size: 30px;
-  padding-right: 100px;
-}
+
 .title {
   color: crimson;
   font-size: 30px;
+}
+.MuiPaper-root.card.css-sdln88 {
+  background-color: rgb(9, 247, 231);
+}
+
+.MuiPaper-root.css-1s6lrct-MuiPaper-root {
+  font-size: 4rem;
+}
+.MuiTypography-root.MuiTypography-h6.css-1jgmn5n-MuiTypography-root {
+  padding-bottom: 10px;
+  font-size: 35px;
+}
+.canvas-draw {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  border: royalblue;
+  box-shadow: rgb(65, 105, 225);
+}
+
+.canvas-btn {
+  font-size: 20px;
 }

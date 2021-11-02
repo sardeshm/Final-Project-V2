@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CardGrid from "../common/CardGrid";
 
-const Consonants = () => {
+const Consonants = ({ type }) => {
   const [consonants, setConsonants] = useState([]);
 
   const AlphabetConsonantsEndpoint =
@@ -19,7 +19,7 @@ const Consonants = () => {
     });
   };
 
-  return <CardGrid dataList={consonants} />;
+  return <CardGrid type={type} dataList={consonants} />;
 };
 
 export default Consonants;

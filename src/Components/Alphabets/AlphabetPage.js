@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Stack from "@mui/material/Stack";
-
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Vowels from "./Vowels";
 import Consonants from "./Consonants";
 import "./AlphabetPage.css";
@@ -30,7 +30,7 @@ const AlphabetPage = () => {
 
   return (
     <div>
-      <div>
+      <div className="alphabet-page-container">
         <Stack direction="row" spacing={7}>
           <Button
             className="vowel-btn"
@@ -42,7 +42,6 @@ const AlphabetPage = () => {
             {" "}
             Vowels
           </Button>
-
           <Button
             className="consonent-btn"
             variant="contained"

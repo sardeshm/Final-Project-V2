@@ -10,7 +10,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 //import CardMedia from "@mui/material/CardMedia";
 //import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import "./CardGrid.css";
+import "./CardGridWords.css";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -60,9 +60,15 @@ const CardGrid = ({ dataList }) => {
           <div className="title">
             {" "}
             <ArrowBackIcon />
-            Click The Button From the side
+            Click The Button From the side button I will appear here!
           </div>
+
           <div>
+            <img
+              src="/images/common/language-composition.jpeg"
+              alt="placeholder"
+              className="placeholder-img"
+            />
             <img
               style={{ position: "relative", padding: 50 }}
               src={selectedData.Image}
@@ -71,11 +77,15 @@ const CardGrid = ({ dataList }) => {
               alt=""
             />
             <div>
-              <Typography
-                gutterBottom
-                variant="h4"
-                component="div"
-              ></Typography>
+              <Typography gutterBottom variant="h4" component="div">
+                MarathiName: {selectedData.MarathiPronunciation}
+              </Typography>
+              <Typography gutterBottom variant="h4" component="div">
+                EnglishName: {selectedData.EnglishName}
+              </Typography>
+              <Typography gutterBottom variant="h4" component="div">
+                GermanName: {selectedData.GermanName}
+              </Typography>
             </div>
           </div>
         </Item>

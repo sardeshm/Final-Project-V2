@@ -1,36 +1,32 @@
-body {
-  /* background-color: rgb(245, 143, 143); */
-
+.alphabet-page {
+  padding-top: 5px;
+  background-color: rgb(121, 227, 241);
   background-repeat: no-repeat;
   align-items: center;
   background-size: cover;
 }
-.vowel-btn {
-  border: none;
-  color: #f3680b;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
+.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeLarge.MuiButton-containedSizeLarge.MuiButtonBase-root.vowel-btn.css-jh47zj-MuiButtonBase-root-MuiButton-root {
+  top: 5%;
+  color: black;
+  background-color: rgb(247, 247, 113);
+  margin: 0;
+  position: absolute;
+  padding-top: 20px;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: inline-block;
 }
 
-.consonent-btn {
-  border: none;
-  color: #f3bd0b;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
-}
-.bkg-btn {
-  width: 100px;
-  height: 100px;
-  background-color: springgreen;
-}
-.click-btn {
-  align-items: center;
+.MuiButton-root.MuiButton-contained.consonent-btn.css-jh47zj-MuiButtonBase-root-MuiButton-root {
+  top: 5%;
+  color: black;
+  background-color: rgb(247, 247, 113);
+  margin: 0;
+  position: absolute;
+  padding-top: 20px;
+  left: 65%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: inline-block;
 }

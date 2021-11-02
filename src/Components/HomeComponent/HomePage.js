@@ -3,9 +3,9 @@ import { useHistory } from "react-router-dom";
 //import { Button } from "@mui/material";
 import NavBar from "../NavBar/NavBar";
 import "./Homepage.css";
-import logo from "../NavBar/logo.png";
+//import logo from "/images/common/logo.jpg";
 
-import SearchBar from "./SearchBar";
+//import SearchBar from "./SearchBar";
 import Footer from "../Footer/Footer";
 
 const HomePage = () => {
@@ -14,24 +14,23 @@ const HomePage = () => {
   const redirect = (path) => {
     history.push(path);
   };
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
 
-  const updateSearchTerm = (value) => {
-    setSearchTerm(value);
-  };
+  // const updateSearchTerm = (value) => {
+  //   setSearchTerm(value);
+  // };
   return (
     <div className="wrapper-homepage">
-      <div>
-        <img src={logo} alt="logo" className="logo" />
-      </div>
-      <SearchBar onChange={(value) => updateSearchTerm(value)} />
-      <NavBar />
-      <div>
-        {/* <Button color="inherit" > */}
+      <img src="/images/common/logo.jpg" alt="logo" className="logo" />
+      <h1 className="header">MultiLinguee </h1>
+      <h6 className="slogan-line">Connecting To The Roots....</h6>
+      <div></div>
 
-        {/* </Button> */}
-      </div>
+      {/* <SearchBar onChange={(value) => updateSearchTerm(value)} /> */}
 
+      <div>
+        <NavBar />
+      </div>
       <div>
         <Footer />
       </div>
