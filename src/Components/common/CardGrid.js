@@ -35,11 +35,11 @@ const CardGrid = ({ dataList, type }) => {
     canvas.current.undo();
   };
   return (
-    <Grid container spacing={4}>
+    <Grid container spacing={4} style={{ background: "lightgreen" }}>
       <Grid item xs={3}>
         <Item style={{ height: "100%" }}>
           <Grid>
-            <Grid>
+            <Grid style={{ backgroundColor: "#f7f771" }}>
               <Box
                 sx={{
                   p: 6,
@@ -55,6 +55,7 @@ const CardGrid = ({ dataList, type }) => {
                     key={data._id}
                     elevation={16}
                     color="black"
+                    style={{ backgroundColor: "#f7f771", fontSize: "2rem" }}
                     onClick={() => setSelectedData(data)}
                   >
                     {data.Marathi}

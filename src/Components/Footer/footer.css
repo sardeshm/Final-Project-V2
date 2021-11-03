@@ -3,8 +3,7 @@
   background-color: lawngreen;
   color: mediumorchid;
 } */
-.footer {
-}
+
 .MuiBottomNavigation-root {
   position: fixed;
   display: flex;
@@ -12,7 +11,4 @@
   bottom: 1px;
   height: 30px;
   width: 100%;
-}
-.MuiBox-root {
-  background-color: lightgreen;
 }

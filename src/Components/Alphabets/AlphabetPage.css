@@ -12,10 +12,11 @@
   margin: 0;
   position: absolute;
   padding-top: 20px;
-  left: 50%;
+  left: 40%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: inline-block;
+  z-index: 2;
 }
 
 .MuiButton-root.MuiButton-contained.consonent-btn.css-jh47zj-MuiButtonBase-root-MuiButton-root {
@@ -25,8 +26,9 @@
   margin: 0;
   position: absolute;
   padding-top: 20px;
-  left: 65%;
+  left: 80%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: inline-block;
+  z-index: 2;
 }
