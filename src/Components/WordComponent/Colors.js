@@ -5,7 +5,8 @@ import CardGridWords from "../common/CardGridWords";
 const Colors = () => {
   const [colors, setColors] = useState([]);
 
-  const ColorsEndpoint = "http://localhost:3001/words/colors";
+  const ColorsEndpoint = "https://langageapp.herokuapp.com/words/colors";
+  //"http://localhost:3001/words/colors";
 
   useEffect(() => {
     fetchColorsData();

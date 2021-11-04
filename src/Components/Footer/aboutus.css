@@ -1,0 +1,26 @@
+.wrapper-aboutpage {
+  background-color: rgb(240, 184, 164);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-heading {
+  color: rgb(18, 18, 234);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subheading-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: darkgreen;
+}
+.para-about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

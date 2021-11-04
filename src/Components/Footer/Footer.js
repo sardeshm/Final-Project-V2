@@ -36,9 +36,15 @@ const Footer = () => {
           <Button color="inherit" onClick={() => redirect("../Contact")}>
             <BottomNavigationAction icon={<ContactsIcon />} />
           </Button>
-          <BottomNavigationAction icon={<InstagramIcon />} />
-          <BottomNavigationAction icon={<TwitterIcon />} />
-          <BottomNavigationAction icon={<FacebookIcon />} />
+          <Button>
+            <BottomNavigationAction icon={<InstagramIcon />} />
+          </Button>
+          <Button>
+            <BottomNavigationAction icon={<TwitterIcon />} />
+          </Button>
+          <Button>
+            <BottomNavigationAction icon={<FacebookIcon />} />
+          </Button>
         </BottomNavigation>
       </Box>
     </div>

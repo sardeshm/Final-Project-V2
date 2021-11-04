@@ -7,7 +7,8 @@ import "./numbercard.css";
 const NumberPage = () => {
   const [numbers, setNumbers] = useState([]);
 
-  const NumbersEndpoint = "http://localhost:3001/wholenumbers";
+  const NumbersEndpoint = "https://langageapp.herokuapp.com/wholenumbers";
+  //"http://localhost:3001/wholenumbers";
 
   useEffect(() => {
     fetchNumbersData();

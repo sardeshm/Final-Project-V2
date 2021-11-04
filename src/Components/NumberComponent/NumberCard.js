@@ -28,59 +28,52 @@ const NumberCard = ({ number }) => {
   };
 
   return (
-    <>
-      <div>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardContent>
-            <Typography
-              fontSize="4rem"
-              align="center"
-              className="number"
-              variant="body2"
-              color="text.secondary"
-            >
-              {number.MarathiNumber}
+    <div className="wrapper-number">
+      <Card sx={{ maxWidth: 345 }}>
+        <CardContent>
+          <Typography
+            fontSize="4rem"
+            align="center"
+            className="number"
+            variant="body2"
+            color="text.secondary"
+          >
+            {number.MarathiNumber}
+          </Typography>
+          <Typography paragraph fontSize="2rem" align="center" className="name">
+            {number.MarathiPronunciation}
+          </Typography>
+        </CardContent>
+
+        <CardActions disableSpacing className="cardaction1">
+          <ExpandMore
+            expand={expanded}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </ExpandMore>
+        </CardActions>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent className="cardcontent2">
+            <Typography align="center" fontSize="3rem">
+              {number.EnglishNumber}
             </Typography>
-            <Typography
-              paragraph
-              fontSize="2rem"
-              align="center"
-              className="name"
-            >
-              {number.MarathiPronunciation}
+
+            <Typography align="center" fontSize="2rem" paragraph>
+              {number.EnglishPronunciation}
+            </Typography>
+            <Typography align="center" fontSize="3rem">
+              {number.GermanNumber}
+            </Typography>
+            <Typography paragraph align="center" fontSize="2rem">
+              {number.GermanPronunciation}
             </Typography>
           </CardContent>
-
-          <CardActions disableSpacing className="cardaction1">
-            <ExpandMore
-              expand={expanded}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            >
-              <ExpandMoreIcon />
-            </ExpandMore>
-          </CardActions>
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
-            <CardContent className="cardcontent2">
-              <Typography align="center" fontSize="3rem">
-                {number.EnglishNumber}
-              </Typography>
-
-              <Typography align="center" fontSize="2rem" paragraph>
-                {number.EnglishPronunciation}
-              </Typography>
-              <Typography align="center" fontSize="3rem">
-                {number.GermanNumber}
-              </Typography>
-              <Typography paragraph align="center" fontSize="2rem">
-                {number.GermanPronunciation}
-              </Typography>
-            </CardContent>
-          </Collapse>
-        </Card>
-      </div>
-    </>
+        </Collapse>
+      </Card>
+    </div>
   );
 };
 

@@ -1,0 +1,16 @@
+.wrapper-contactpage {
+  background-color: rgb(240, 184, 164);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.contact-card {
+  background-color: cornsilk;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -5,28 +5,13 @@ import Vowels from "./Vowels";
 import Consonants from "./Consonants";
 import "./AlphabetPage.css";
 import Button from "@mui/material/Button";
-//import ButtonGroup from "@mui/material/ButtonGroup";
-import vowelbackground from "./vowelbackground.jpeg";
-//import { makeStyles } from "@mui/material";
+
 import { useLocation } from "react-router-dom";
 
 const AlphabetPage = () => {
   const [isVowelsComponent, setVowelsComponent] = useState(true);
   const location = useLocation();
   const param = location.state.params;
-  // const useStyles = makeStyles({
-  //   root: {
-  //     width: "150px",
-  //     height: "150px",
-  //     backgroundImage: "./vowelbackground.jpeg",
-  //   },
-  // });
-
-  // const ButtonStyled = () => {
-  //   const classes = useStyles();
-
-  //   return <Button className={classes.root}></Button>;
-  // };
 
   return (
     <div>
@@ -42,6 +27,7 @@ const AlphabetPage = () => {
             {" "}
             Vowels
           </Button>
+
           <Button
             className="consonent-btn"
             variant="contained"

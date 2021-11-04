@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./Vowels.css";
+
 import CardGrid from "../common/CardGrid";
 
 const Vowels = ({ type }) => {
   const [vowels, setVowels] = useState([]);
 
-  const AlphabetVowelsEndpoint = "http://localhost:3001/alphabets/vowels";
+  const AlphabetVowelsEndpoint =
+    "https://langageapp.herokuapp.com/alphabets/vowels";
+  //"http://localhost:3001/alphabets/vowels";
 
   useEffect(() => {
     fetchVowelsData();

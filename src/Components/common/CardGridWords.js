@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
 //import Card from "@mui/material/Card";
 //import CardActions from "@mui/material/CardActions";
 //import CardContent from "@mui/material/CardContent";
@@ -25,15 +25,15 @@ const CardGrid = ({ dataList }) => {
   const [selectedData, setSelectedData] = useState({});
 
   return (
-    <Grid container spacing={4}>
+    <Grid container spacing={4} style={{ background: "#AFB7F7", margin: "0" }}>
       <Grid item xs={3}>
         <Item style={{ height: "100%" }}>
           <Grid>
-            <Grid>
+            <Grid style={{ backgroundColor: "#f7f771" }}>
               <Box
                 sx={{
-                  p: 4,
-                  bgcolor: "yellow",
+                  p: 6,
+
                   display: "grid",
                   gridTemplateColumns: { md: "1fr 1fr" },
                   gap: 4,
@@ -57,11 +57,7 @@ const CardGrid = ({ dataList }) => {
       </Grid>
       <Grid item xs={9}>
         <Item style={{ height: "100%" }} className="card">
-          <div className="title">
-            {" "}
-            <ArrowBackIcon />
-            Click The Button From the side button I will appear here!
-          </div>
+          <div className="title"> Click the Button, I will appear here!</div>
 
           <div>
             <img
@@ -77,13 +73,13 @@ const CardGrid = ({ dataList }) => {
               alt=""
             />
             <div>
-              <Typography gutterBottom variant="h4" component="div">
+              <Typography gutterBottom variant="h6" component="div">
                 MarathiName: {selectedData.MarathiPronunciation}
               </Typography>
-              <Typography gutterBottom variant="h4" component="div">
+              <Typography gutterBottom variant="h6" component="div">
                 EnglishName: {selectedData.EnglishName}
               </Typography>
-              <Typography gutterBottom variant="h4" component="div">
+              <Typography gutterBottom variant="h6" component="div">
                 GermanName: {selectedData.GermanName}
               </Typography>
             </div>

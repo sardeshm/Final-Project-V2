@@ -5,6 +5,7 @@ import Animals from "./Animals";
 import Colors from "./Colors";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import "./wordspage.css";
 
 const WordsPage = () => {
   const [isComponent, setComponent] = useState();
@@ -16,8 +17,8 @@ const WordsPage = () => {
   }
 
   return (
-    <div>
-      <div>
+    <div className="wrapper-wordspage">
+      <ButtonGroup className="button-grp">
         <Button
           variant="contained"
           color="primary"
@@ -55,17 +56,27 @@ const WordsPage = () => {
         >
           Colors
         </Button>
-      </div>
+      </ButtonGroup>
 
       {isComponent === "Vegetables" && <Vegetables />}
       {isComponent === "Fruits" && <Fruits />}
       {isComponent === "Animals" && <Animals />}
       {isComponent === "Colors" && <Colors />}
       {!isComponent && (
-        <h1>
-          More Words सुंदर सुंदर शब्दांचे सुंदर सुंदर घर त्यांतून काही हळवे हळवे
-          राहत होते स्वर
-        </h1>
+        <div>
+          <p className="header-word">
+            सुंदर सुंदर शब्दांचे सुंदर सुंदर घर त्यांतून काही हळवे हळवे राहत
+            होते स्वर <br />
+            Open a book and you can share, wondrous words you find in there!
+            <p className="para-word">pinterest</p>
+          </p>
+
+          <img
+            src="/images/common/board-template.jpeg"
+            alt="placeholder"
+            className="bkg_wordsimg"
+          />
+        </div>
       )}
     </div>
   );

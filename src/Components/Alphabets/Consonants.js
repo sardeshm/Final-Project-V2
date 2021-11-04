@@ -6,7 +6,8 @@ const Consonants = ({ type }) => {
   const [consonants, setConsonants] = useState([]);
 
   const AlphabetConsonantsEndpoint =
-    "http://localhost:3001/alphabets/consonants";
+    "https://langageapp.herokuapp.com/alphabets/consonants";
+  //"http://localhost:3001/alphabets/consonants";
 
   useEffect(() => {
     fetchConsonantsData();

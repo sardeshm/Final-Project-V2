@@ -4,7 +4,20 @@
   height: 200px;
   align-items: center;
   padding-top: 10px;
-  padding-left: 10px;
+
   margin-left: auto;
   margin-right: auto;
+}
+
+.css-1s6lrct-MuiPaper-root {
+  font-size: 2rem;
+  color: rgb(131, 8, 247);
+}
+.title {
+  padding-left: 450px;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation16.mousePointer.css-1s6lrct-MuiPaper-root {
+  font-size: 2rem;
+  background-color: cyan;
+  color: black;
 }

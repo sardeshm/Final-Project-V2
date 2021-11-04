@@ -35,11 +35,11 @@ const CardGrid = ({ dataList, type }) => {
     canvas.current.undo();
   };
   return (
-    <Grid container spacing={4} style={{ background: "lightgreen" }}>
+    <Grid container spacing={4} style={{ background: "#b2f6ac", margin: "0" }}>
       <Grid item xs={3}>
         <Item style={{ height: "100%" }}>
           <Grid>
-            <Grid style={{ backgroundColor: "#f7f771" }}>
+            <Grid style={{ backgroundColor: "#F9F99B" }}>
               <Box
                 sx={{
                   p: 6,
@@ -68,6 +68,11 @@ const CardGrid = ({ dataList, type }) => {
       </Grid>
       <Grid item xs={9}>
         <Item style={{ height: "100%" }}>
+          <img
+            src="/images/common/animal-alphabet.jpeg"
+            alt="placeholder"
+            className="placeholder-img"
+          />
           <div>
             {type === "alphabet" ? (
               <img
@@ -91,13 +96,13 @@ const CardGrid = ({ dataList, type }) => {
                 component="div"
               ></Typography>
 
-              <Typography variant="h6" color="text.secondary">
+              <Typography variant="h6" color="text.secondary" marginTop="auto">
                 Marathi: {selectedData.Marathi} {selectedData.MarathiName}
               </Typography>
-              <Typography variant="h6" color="text.secondary">
+              <Typography variant="h6" color="text.secondary" marginTop="auto">
                 English: {selectedData.English} {selectedData.EnglishName}
               </Typography>
-              <Typography variant="h6" color="text.secondary">
+              <Typography variant="h6" color="text.secondary" marginTop="auto">
                 German: {selectedData.German} {selectedData.GermanName}
               </Typography>
             </div>

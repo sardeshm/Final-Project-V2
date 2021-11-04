@@ -12,8 +12,10 @@
   font-size: 30px;
 }
 
-.css-1s6lrct-MuiPaper-root {
+.MuiPaper-rounded.MuiPaper-elevation1.mousePointer.css-1s6lrct-MuiPaper-root {
   font-size: 2rem;
+  background-color: cyan;
+  color: black;
 }
 /* .css-j23p4t-MuiGrid-root {
   background-color: palegoldenrod;

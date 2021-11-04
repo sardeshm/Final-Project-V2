@@ -5,7 +5,8 @@ import CardGridWords from "../common/CardGridWords";
 const Fruits = () => {
   const [fruits, setFruits] = useState([]);
 
-  const WordsFruitsEndpoint = "http://localhost:3001/words/fruits";
+  const WordsFruitsEndpoint = "https://langageapp.herokuapp.com/words/fruits";
+  //http://localhost:3001/words/fruits";
 
   useEffect(() => {
     fetchFruitsData();
