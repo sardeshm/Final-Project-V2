@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Typography, Card, CardContent, TextField } from "@mui/material";
-import { maxWidth } from "@mui/system";
+
 import { Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import "./contactform.css";
@@ -16,7 +16,7 @@ const ContactForm = () => {
     console.log({ mailerState });
     console.log("mailer", mailerState);
 
-    const response = await fetch("http://localhost:3001/send", {
+    const response = await fetch("https://langageapp.herokuapp.com/send", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

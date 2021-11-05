@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Card, CardContent, TextField } from "@mui/material";
+import { Typography, Card, CardContent } from "@mui/material";
 import "./aboutus.css";
 import Grid from "@mui/material/Grid";
 const AboutUs = () => {

@@ -25,8 +25,8 @@ const CardGrid = ({ dataList, type }) => {
   const canvas = useRef(null);
 
   const handleClick = () => {
-    const data = canvas.current.getSaveData();
-    const clear = canvas;
+    //   //const data = canvas.current.getSaveData();
+    //   // const clear = canvas;
   };
   const clear = () => {
     canvas.current.clear();
@@ -86,6 +86,7 @@ const CardGrid = ({ dataList, type }) => {
               <img
                 style={{ position: "relative", padding: 100 }}
                 src={"/ImagesForPractice/" + selectedData.canvasImage}
+                alt=""
               />
             )}
 

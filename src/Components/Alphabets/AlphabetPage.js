@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Stack from "@mui/material/Stack";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
 import Vowels from "./Vowels";
 import Consonants from "./Consonants";
 import "./AlphabetPage.css";

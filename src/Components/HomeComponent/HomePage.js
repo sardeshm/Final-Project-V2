@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
+// import { useHistory } from "react-router-dom";
 //import { Button } from "@mui/material";
 import NavBar from "../NavBar/NavBar";
 import "./Homepage.css";
@@ -9,11 +9,11 @@ import "./Homepage.css";
 import Footer from "../Footer/Footer";
 
 const HomePage = () => {
-  let history = useHistory();
+  // let history = useHistory();
 
-  const redirect = (path) => {
-    history.push(path);
-  };
+  // const redirect = (path) => {
+  //   history.push(path);
+  // };
   // const [searchTerm, setSearchTerm] = useState("");
 
   // const updateSearchTerm = (value) => {

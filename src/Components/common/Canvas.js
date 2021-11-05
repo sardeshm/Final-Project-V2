@@ -4,14 +4,14 @@ import CanvasDraw from "react-canvas-draw";
 import Drawing from "./Drawing";
 
 import "./canvas.css";
-import { useIsMobileOrTablet } from "./isMobileOrTablet";
+// import { useIsMobileOrTablet } from "./isMobileOrTablet";
 
 const Canvas = () => {
-  const isMobOrTab = useIsMobileOrTablet();
+  // const isMobOrTab = useIsMobileOrTablet();
   const canvas = useRef(null);
   const handleClick = () => {
-    const data = canvas.current.getSaveData();
-    const clear = canvas;
+    //const data = canvas.current.getSaveData();
+    // const clear = canvas;
   };
   const clear = () => {
     canvas.current.clear();
@@ -29,13 +29,14 @@ const Canvas = () => {
             <span role="img" aria-label="fingers pointing down">
               👇👇👇👇
             </span>{" "}
-            Use your {isMobOrTab ? "finger" : "mouse"} to draw{" "}
+            Use mouse to draw
+            {/* Use your {isMobOrTab ? "finger" : "mouse"} to draw{" "} */}
             <span role="img" aria-label="fingers pointing down">
               👇👇👇👇
             </span>
           </p>
           <CanvasDraw
-            brushRadius={1}
+            brushRadius={2}
             brushColor="red"
             hideGrid={true}
             style={{
