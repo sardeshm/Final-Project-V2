@@ -1,9 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { styled } from "@mui/material/styles";
-import abc from "./abc.jpeg";
-import number from "./number.jpeg";
-import words from "./words_1.jpeg";
 
 import "./NavBar.css";
 
@@ -55,7 +52,11 @@ const NavBar = () => {
                     onClick={() => redirect("/alphabets", "alphabet")}
                     className="flexContainer"
                   >
-                    <img src={abc} alt="alphabet" className="img-home" />
+                    <img
+                      src="/ImagesForPractice/abc.jpeg"
+                      alt="alphabet"
+                      className="img-home"
+                    />
                     <div className="p3"> Alphabet</div>
                   </div>
                 </Item>
@@ -69,7 +70,11 @@ const NavBar = () => {
                     onClick={() => redirect("/numbers")}
                     className="flexContainer"
                   >
-                    <img src={number} alt="number" className="img-home" />
+                    <img
+                      src="/ImagesForPractice/number.jpeg"
+                      alt="number"
+                      className="img-home"
+                    />
                     <div className="p3"> Number</div>
                   </div>
                 </Item>
@@ -83,7 +88,11 @@ const NavBar = () => {
                     onClick={() => redirect("/words")}
                     className="flexContainer"
                   >
-                    <img src={words} alt="word" className="img-home" />
+                    <img
+                      src="/ImagesForPractice/words_1.jpeg"
+                      alt="word"
+                      className="img-home"
+                    />
                     <div className="p4"> Words</div>
                   </div>
                 </Item>
@@ -98,7 +107,7 @@ const NavBar = () => {
                     className="flexContainer"
                   >
                     <img
-                      src="/images/common/sketch.jpeg"
+                      src="/ImagesForPractice/sketch.jpeg"
                       alt="word"
                       className="img-home"
                     />
