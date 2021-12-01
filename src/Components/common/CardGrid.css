@@ -12,18 +12,6 @@
   font-size: 30px;
 }
 
-.MuiPaper-rounded.MuiPaper-elevation1.mousePointer.css-1s6lrct-MuiPaper-root {
-  font-size: 2rem;
-  background-color: cyan;
-  color: black;
-}
-/* .css-j23p4t-MuiGrid-root {
-  background-color: palegoldenrod;
-} */
-.MuiTypography-root.MuiTypography-h6.css-1jgmn5n-MuiTypography-root {
-  padding-bottom: 10px;
-  font-size: 35px;
-}
 .canvas-draw {
   font-family: "Poppins", sans-serif;
   display: flex;
@@ -34,11 +22,4 @@
 
 .canvas-btn {
   font-size: 20px;
-}
-/* .css-f6ig1s {
-  background-color: rgb(167, 225, 243);
-} */
-
-.css-rxdq0m-MuiPaper-root {
-  background-color: rgb(240, 46, 85);
 }

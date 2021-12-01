@@ -14,9 +14,9 @@ const AlphabetPage = () => {
   const param = location.state.params;
 
   return (
-    <div>
-      <div className="alphabet-page-container">
-        <Stack direction="row" spacing={7}>
+    <div className="alphabet-page">
+      <div className="flexContainer">
+        <Stack direction="row" spacing={2}>
           <Button
             className="vowel-btn"
             variant="contained"
@@ -40,11 +40,13 @@ const AlphabetPage = () => {
         </Stack>
       </div>
 
-      {isVowelsComponent ? (
-        <Vowels type={param} />
-      ) : (
-        <Consonants type={param} />
-      )}
+      <div>
+        {isVowelsComponent ? (
+          <Vowels type={param} />
+        ) : (
+          <Consonants type={param} />
+        )}
+      </div>
     </div>
   );
 };

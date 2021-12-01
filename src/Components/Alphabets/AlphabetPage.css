@@ -1,35 +1,29 @@
 .alphabet-page {
   min-height: 100vh;
-  padding-top: 5px;
-  background-color: rgb(121, 227, 241);
-  background-repeat: no-repeat;
+  padding-top: 10px;
   align-items: center;
   background-size: cover;
-}
-.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeLarge.MuiButton-containedSizeLarge.MuiButtonBase-root.vowel-btn.css-jh47zj-MuiButtonBase-root-MuiButton-root {
-  top: 10%;
-  color: black;
-  background-color: rgb(247, 247, 113);
-  margin: 0;
-  position: absolute;
-  padding-top: 20px;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  display: flex;
-  z-index: 2;
+  background-image: radial-gradient(
+    circle,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
 }
 
-.MuiButton-root.MuiButton-contained.consonent-btn.css-jh47zj-MuiButtonBase-root-MuiButton-root {
-  top: 10%;
-  color: black;
-  background-color: rgb(247, 247, 113);
-  margin: 0;
-  position: absolute;
-  padding-top: 20px;
-  left: 80%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.flexContainer {
   display: flex;
-  z-index: 2;
+  justify-content: center;
+}
+
+.flexItem {
 }

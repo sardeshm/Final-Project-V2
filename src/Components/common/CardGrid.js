@@ -11,12 +11,19 @@ import Typography from "@mui/material/Typography";
 import "./CardGrid.css";
 
 const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
   textAlign: "center",
   color: theme.palette.text.secondary,
   height: 60,
   lineHeight: "60px",
-  backgroundColor: "orange",
+  backgroundColor: "white !important",
+}));
+
+const InnerItem = styled(Paper)(({ theme }) => ({
+  textAlign: "center",
+  color: "white",
+  height: 60,
+  lineHeight: "60px",
+  backgroundColor: "#1976d2 !important",
 }));
 
 const CardGrid = ({ dataList, type }) => {
@@ -35,48 +42,43 @@ const CardGrid = ({ dataList, type }) => {
     canvas.current.undo();
   };
   return (
-    <Grid container spacing={4} style={{ background: "#b2f6ac", margin: "0" }}>
+    <Grid container spacing={4} style={{ margin: "0" }}>
       <Grid item xs={3}>
         <Item style={{ height: "100%" }}>
           <Grid>
-            <Grid style={{ backgroundColor: "#F9F99B" }}>
-              <Box
-                sx={{
-                  p: 6,
-
-                  display: "grid",
-                  gridTemplateColumns: { md: "1fr 1fr" },
-                  gap: 4,
-                }}
-              >
-                {dataList.map((data) => (
-                  <Item
-                    className="mousePointer"
-                    key={data._id}
-                    elevation={16}
-                    color="black"
-                    style={{ backgroundColor: "#f7f771", fontSize: "2rem" }}
-                    onClick={() => setSelectedData(data)}
-                  >
-                    {data.Marathi}
-                  </Item>
-                ))}
-              </Box>
-            </Grid>
+            <Box
+              sx={{
+                p: 6,
+                display: "grid",
+                gridTemplateColumns: { md: "1fr 1fr" },
+                gap: 4,
+              }}
+            >
+              {dataList.map((data) => (
+                <InnerItem
+                  key={data._id}
+                  elevation={16}
+                  color="black"
+                  style={{
+                    backgroundColor: "white !important",
+                    fontSize: "2rem",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => setSelectedData(data)}
+                >
+                  {data.Marathi}
+                </InnerItem>
+              ))}
+            </Box>
           </Grid>
         </Item>
       </Grid>
       <Grid item xs={9}>
         <Item style={{ height: "100%" }}>
-          <img
-            src="/images/common/animal-alphabet.jpeg"
-            alt="placeholder"
-            className="placeholder-img"
-          />
           <div>
             {type === "alphabet" ? (
               <img
-                style={{ position: "relative", padding: 80 }}
+                style={{ position: "relative", paddingTop: 20 }}
                 src={selectedData.Image}
                 width="400"
                 height="400"

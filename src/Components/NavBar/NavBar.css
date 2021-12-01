@@ -11,6 +11,15 @@
   align-content: center;
 }
 
+.flexItem {
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+}
+
 .img-home {
   margin-top: 1em;
   width: 150px;
@@ -23,4 +32,6 @@
 .p4 {
   font-size: 20px;
   font-weight: bolder;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }

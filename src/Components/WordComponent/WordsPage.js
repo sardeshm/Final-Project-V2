@@ -6,6 +6,7 @@ import Colors from "./Colors";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import "./wordspage.css";
+import { Stack } from "@mui/material";
 
 const WordsPage = () => {
   const [isComponent, setComponent] = useState();
@@ -18,45 +19,49 @@ const WordsPage = () => {
 
   return (
     <div className="wrapper-wordspage">
-      <ButtonGroup className="button-grp">
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          onClick={handleOnClick}
-          id="Vegetables"
-        >
-          Vegetables
-        </Button>
+      <div className="words-page">
+        <Stack direction="row" spacing={2}>
+          <ButtonGroup className="button-grp">
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={handleOnClick}
+              id="Vegetables"
+            >
+              Vegetables
+            </Button>
 
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          onClick={handleOnClick}
-          id="Fruits"
-        >
-          Fruits
-        </Button>
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          onClick={handleOnClick}
-          id="Animals"
-        >
-          Animals
-        </Button>
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          onClick={handleOnClick}
-          id="Colors"
-        >
-          Colors
-        </Button>
-      </ButtonGroup>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={handleOnClick}
+              id="Fruits"
+            >
+              Fruits
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={handleOnClick}
+              id="Animals"
+            >
+              Animals
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={handleOnClick}
+              id="Colors"
+            >
+              Colors
+            </Button>
+          </ButtonGroup>
+        </Stack>
+      </div>
 
       {isComponent === "Vegetables" && <Vegetables />}
       {isComponent === "Fruits" && <Fruits />}

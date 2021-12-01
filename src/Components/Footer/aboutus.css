@@ -1,11 +1,12 @@
 .wrapper-aboutpage {
-  background-color: rgb(240, 184, 164);
+  background-color: #b4deef;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
 .about-heading {
   color: rgb(18, 18, 234);
@@ -19,8 +20,15 @@
   align-items: center;
   color: darkgreen;
 }
-.para-about {
+/* .para-about {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+} */
+.about-card {
+  background-color: cornsilk;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }

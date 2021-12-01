@@ -15,7 +15,7 @@ const ContactForm = () => {
     e.preventDefault();
     console.log({ mailerState });
     console.log("mailer", mailerState);
-
+    // eslint-disable-next-line
     const response = await fetch("https://langageapp.herokuapp.com/send", {
       method: "POST",
       headers: {

@@ -1,9 +1,24 @@
 .wrapper-wordspage {
-  background-color: rgb(240, 184, 164);
+  min-height: 100vh;
+  padding-top: 10px;
+  background-image: radial-gradient(
+    circle,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 }
 .bkg_wordsimg {
   margin-left: auto;
@@ -26,13 +41,13 @@
 }
 
 .button-grp {
-  top: 7%;
+  top: 5%;
   color: black;
   background-color: rgb(247, 247, 113);
   margin: 0;
   position: absolute;
   padding-top: 20px;
-  left: 50%;
+  left: 60%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: inline-block;
