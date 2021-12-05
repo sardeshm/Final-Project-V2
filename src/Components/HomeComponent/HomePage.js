@@ -1,8 +1,6 @@
 import React from "react";
-
 import NavBar from "../NavBar/NavBar";
 import "./Homepage.css";
-
 import Footer from "../Footer/Footer";
 
 const HomePage = () => {

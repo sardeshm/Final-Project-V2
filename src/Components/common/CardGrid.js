@@ -3,9 +3,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
-
 import CanvasDraw from "react-canvas-draw";
-
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "./CardGrid.css";

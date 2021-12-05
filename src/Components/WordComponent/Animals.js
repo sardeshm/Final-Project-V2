@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import CardGridWords from "../common/CardGridWords";
+import CardGrid from "../common/CardGrid";
 
 const Animals = () => {
   const [animals, setAnimals] = useState([]);
@@ -14,12 +14,12 @@ const Animals = () => {
 
   const fetchAnimalData = async () => {
     await axios.get(AnimalsEndpoint).then((response) => {
-      console.log(response);
+      console.log("animal response :", response);
       setAnimals(response.data);
     });
   };
 
-  return <CardGridWords dataList={animals} />;
+  return <CardGrid type="alphabet" dataList={animals} />;
 };
 
 export default Animals;
