@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Stack from "@mui/material/Stack";
-
 import Vowels from "./Vowels";
 import Consonants from "./Consonants";
 import "./AlphabetPage.css";

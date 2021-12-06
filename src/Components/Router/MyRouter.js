@@ -4,9 +4,7 @@ import HomePage from "../HomeComponent/HomePage";
 import AlphabetPage from "../Alphabets/AlphabetPage";
 import NumberPage from "../NumberComponent/NumberPage";
 import WordsPage from "../WordComponent/WordsPage";
-
 import Canvas from "../common/Canvas";
-//import Contact from "../Footer/Contact";
 import AboutUs from "../Footer/AboutUs";
 import ContactForm from "../Footer/ContactForm";
 

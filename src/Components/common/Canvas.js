@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import { Button } from "@mui/material";
 import CanvasDraw from "react-canvas-draw";
-import Drawing from "./Drawing";
-
 import "./canvas.css";
 // import { useIsMobileOrTablet } from "./isMobileOrTablet";
 
@@ -54,7 +52,6 @@ const Canvas = () => {
         <Button size="large" onClick={undo}>
           Undo
         </Button>
-        <Drawing />
       </div>
     </div>
   );
